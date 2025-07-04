@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CafeApp", "CafeApp.csproj", "{8EE01D17-2575-4CC9-AE83-C43F5582174B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8EE01D17-2575-4CC9-AE83-C43F5582174B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EE01D17-2575-4CC9-AE83-C43F5582174B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EE01D17-2575-4CC9-AE83-C43F5582174B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EE01D17-2575-4CC9-AE83-C43F5582174B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FE9C77D7-60FB-4FD8-9B76-0D842A0CE77E}
+	EndGlobalSection
+EndGlobal
