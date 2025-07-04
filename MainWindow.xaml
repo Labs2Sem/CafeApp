@@ -5,8 +5,62 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CafeApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Вход в систему" Height="450" Width="400"
+        Loaded="Window_Loaded">
 
+    <Grid Name="MainGrid" Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Переключатель типа пользователя -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+            <RadioButton x:Name="rbEmployee" Content="Сотрудник" GroupName="UserType" 
+                        IsChecked="True" Margin="5" Checked="UserType_Checked"/>
+            <RadioButton x:Name="rbClient" Content="Клиент" GroupName="UserType" 
+                        Margin="5" Checked="UserType_Checked"/>
+        </StackPanel>
+
+        <!-- Панель для сотрудника -->
+        <StackPanel x:Name="EmployeePanel" Grid.Row="1" Margin="0,20">
+            <TextBlock Text="Логин:" Margin="0,0,0,5"/>
+            <TextBox x:Name="txtUsername" Width="200" HorizontalAlignment="Left"/>
+
+            <TextBlock Text="Пароль:" Margin="0,10,0,5"/>
+            <PasswordBox x:Name="txtPassword" Width="200" HorizontalAlignment="Left"/>
+        </StackPanel>
+
+        <!-- Панель для клиента -->
+        <StackPanel x:Name="ClientPanel" Grid.Row="1" Margin="0,20" Visibility="Collapsed">
+            <TextBlock Text="Номер телефона:" Margin="0,0,0,5"/>
+            <TextBox x:Name="txtPhoneNumber" Width="200" HorizontalAlignment="Left"
+                    PreviewTextInput="PhoneNumber_PreviewTextInput"/>
+
+            <Button x:Name="btnSendCode" Content="Прислать код" Margin="0,10,0,0"
+                    Width="200" HorizontalAlignment="Left" Click="btnSendCode_Click"/>
+
+            <TextBlock x:Name="lblCode" Text="Код подтверждения:" Margin="0,10,0,5" 
+                      Visibility="Collapsed"/>
+            <TextBox x:Name="txtVerificationCode" Width="200" HorizontalAlignment="Left"
+                    Visibility="Collapsed" PreviewTextInput="VerificationCode_PreviewTextInput"/>
+        </StackPanel>
+
+        <!-- Прогресс бар и статус -->
+        <ProgressBar x:Name="progressBar" Grid.Row="3" Height="20" Margin="0,20" 
+                    Visibility="Collapsed"/>
+        <TextBlock x:Name="txtProgress" Grid.Row="3" HorizontalAlignment="Center" 
+                  VerticalAlignment="Bottom" Margin="0,0,0,10" Visibility="Collapsed"/>
+
+        <!-- Кнопки -->
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="btnLogin" Content="Вход" Width="100" Margin="0,0,10,0"
+                   Click="btnLogin_Click"/>
+            <Button x:Name="btnCancel" Content="Отмена" Width="100" 
+                   Visibility="Collapsed" Click="btnCancel_Click"/>
+        </StackPanel>
     </Grid>
 </Window>
