@@ -62,6 +62,6 @@
             <Button x:Name="btnCancel" Content="Отмена" Width="100" 
                    Visibility="Collapsed" Click="btnCancel_Click"/>
         </StackPanel>
-        <Image Margin="125,44,131,41" Source="/622139e3d8a78873bf5f63a530617944.jpg" Stretch="Fill" Grid.Row="3"/>
+        <Image Margin="82,46,82,46" Grid.Row="3" Source="/Pics/544e14_no_logo_no_text.jpg" Stretch="Fill"/>
     </Grid>
 </Window>
