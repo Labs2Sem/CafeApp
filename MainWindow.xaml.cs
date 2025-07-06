@@ -21,6 +21,8 @@ namespace CafeApp
         private BackgroundWorker loginWorker;
         private bool isLoginCancelled = false;
 
+        private Object smart_man_in_glasses;
+
         public MainWindow()
         {
             InitializeComponent();
